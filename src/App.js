@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { nanoid } from 'nanoid';
 import NotesList from './components/NotesList';
 import Search from './components/Search';
 import Header from './components/Header';
@@ -7,7 +6,7 @@ import Header from './components/Header';
 const App = () => {
 	const [notes, setNotes] = useState([
 		{
-			id: nanoid(),
+			id: Math.random(),
 			text: 'Sample Note!!',
 			date: '15/04/2021',
 		}
@@ -36,7 +35,7 @@ const App = () => {
 	const addNote = (text) => {
 		const date = new Date();
 		const newNote = {
-			id: nanoid(),
+			id: Math.random(),
 			text: text,
 			date: date.toLocaleDateString(),
 		};
