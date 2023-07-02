@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	transition: all 0.5s;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 10px;
+	margin-bottom: 7px;
+}
+
+.dark-mode {
+	background-color: #000;
+}
+
+.dark-mode h1 {
+	color: #fff;
+}
+
+.container {
+	max-width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 25px;
+	min-height: 100vh;
+}
+
+.notes-list {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	margin: 40px 0;
+}
+
+.save-btn:hover {
+	cursor: pointer;
+}
+
+.fa-check {
+	color: rgb(0, 0, 0);
+}
+
+.fa-xmark {
+	color: #f00;
+}
+
+.note.new {
+	background-color: #00d4fe;
+	box-shadow: 1px 1px 15px 2px #00d4fe;
+}
+
+textarea {
+	border: none;
+	resize: none;
+	background-color: #00d4fe;
+}
+
+textarea:focus {
+	outline: none;
+}
+
+.save {
+	background-color: #e1e1e1;
+	border: none;
+	border-radius: 15px;
+	padding: 5px 10px 5px 10px;
+	color: rgb(233, 233, 233);
+	background-color: rgb(22, 22, 22);
+	padding: 7px 15px;
+	
+}
+
+.save:hover {
+	background-color: #444;
+	cursor: pointer;
+}
+
+.dark-mode .save {
+	background-color: rgb(233, 233, 233);
+	color: rgb(22, 22, 22);
+}
+.dark-mode .save:hover {
+	background-color: #bbb;
+}
+
+.note {
+	/* background-color: #fef68a;
+	box-shadow: 1px 1px 15px 2px #fef68a; */
+	border-radius: 10px;
+	padding: 1rem;
+	min-height: 170px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	white-space: pre-wrap;
+	font-weight: 400;
+	margin: 10px;
+}
+
+.note-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.delete-icon, .save-btn {
+	cursor: pointer;
+	height: 35px;
+	width: 35px;
+	border-radius: 50%;
+	font-size: 17px;
+	font-weight: 500;
+	border: 2px solid #f00;
+	display: grid;
+	place-items: center;
+}
+
+.delete-icon {
+	opacity: 0;
+}
+
+.note:hover .note-footer span.delete-icon {
+	opacity: 1
+}
+
+
+.delete-icon:hover {
+	background: #f00;
+	box-shadow: 1px 1px 20px #f00;
+}
+
+.delete-icon:hover .fa-xmark, .save-btn:hover .fa-check {
+	color: #fff;
+}
+
+.save-btn {
+	border: 2px solid #000;
+}
+
+.save-btn:hover {
+	background: #000;
+	box-shadow: 1px 1px 20px #000;
+}
+
+.search {
+	display: flex;
+	align-items: center;
+	background-color: rgb(233, 233, 233);
+	border-radius: 10px;
+	padding: 7px;
+	margin-bottom: 1.5em;
+	margin: 10px;
+}
+
+.dark-mode .search, .dark-mode .search input {
+	background: #333;
+	color: #eee;
+}
+
+.dark-mode .search input::placeholder {
+	color: #fff;
+}
+
+.fa-magnifying-glass {
+	margin: 0 8px;
+	color: grey;
+}
+
+.search input {
+	padding: 7px;
+	border: none;
+	background-color: rgb(233, 233, 233);
+	width: 100%;
+}
+
+.search input:focus {
+	outline: none;
+}
